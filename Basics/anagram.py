@@ -6,7 +6,7 @@ each other.
 def validAnagram(string1: str, string2: str) -> bool:
     # we check is the len of the two strings are the same and that they are not the
     # same strings. 
-    if len(string1) != len(string2) or string1 == string2 :
+    if len(string1) != len(string2):
         return False
     else:
         # setting up a counter

@@ -21,6 +21,7 @@ from Recursion.collectStrings import collectStrings
 # Searching Functions
 from Searching_Algorithams.linear_search import LinearSearch
 from Searching_Algorithams.binary_search import BinarySearch
+from Searching_Algorithams.naive_string_search import NaiveStringSearchV1, NaiveStringSearchV2
 
 
 def function_runner(func):
@@ -29,7 +30,5 @@ def function_runner(func):
 
 
 function_runner(
-    BinarySearch(
-        input=array_val_combo["2"]["array"], value=array_val_combo["2"]["value"]
-    )
+    NaiveStringSearchV2(first_str="бобагбобфдгапкбобфмкгбоб", second_str="боб")
 )
