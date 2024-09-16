@@ -6,6 +6,61 @@ nested_obj = {
     "i": [12, 13, 14],
 }
 
+sort_one_to_five_list = [1, 2, 3, 4, 5]
+sort_long_list = [
+    5,
+    6,
+    10,
+    13,
+    14,
+    18,
+    30,
+    34,
+    35,
+    37,
+    40,
+    44,
+    64,
+    79,
+    84,
+    86,
+    95,
+    96,
+    98,
+    99,
+]
+
+array_val_combo = {
+    "1": {
+        "array": sort_one_to_five_list,
+        "value": 2,
+    },
+    "2": {
+        "array": sort_one_to_five_list,
+        "value": 3,
+    },
+    "3": {
+        "array": sort_one_to_five_list,
+        "value": 5,
+    },
+    "4": {
+        "array": sort_one_to_five_list,
+        "value": 6,
+    },
+    "6": {
+        "array": sort_long_list,
+        "value": 10,
+    },
+    "7": {
+        "array": sort_long_list,
+        "value": 95,
+    },
+    "8": {
+        "array": sort_long_list,
+        "value": 100,
+    },
+}
+
 longList: list[int] = [
     42,
     67,

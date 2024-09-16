@@ -1,4 +1,4 @@
-from test_data.test_array import longList
+from test_data.test_data import longList
 
 """
 Write a function with accepts a variable number of arguments, and checks 

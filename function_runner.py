@@ -1,5 +1,7 @@
-from test_data.test_array import nested_obj
+# Data
+from test_data.test_data import nested_obj, array_val_combo
 
+# Recursion Functions
 from Recursion.basic_count_down import countDown
 from Recursion.sum_range import sum_range
 from Recursion.factorial import factorial
@@ -15,7 +17,10 @@ from Recursion.nestedEvenSum import nestedEven
 from Recursion.capitalizeWords import capitalizeWords
 from Recursion.stringifyNumber import stringifyNumbers
 from Recursion.collectStrings import collectStrings
+
+# Searching Functions
 from Searching_Algorithams.linear_search import LinearSearch
+from Searching_Algorithams.binary_search import BinarySearch
 
 
 def function_runner(func):
@@ -23,4 +28,8 @@ def function_runner(func):
     print(f"result:: {result}")
 
 
-function_runner(LinearSearch(array=["Sumito", "JOHN", "RON"], values="JOHN"))
+function_runner(
+    BinarySearch(
+        input=array_val_combo["2"]["array"], value=array_val_combo["2"]["value"]
+    )
+)
