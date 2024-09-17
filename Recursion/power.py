@@ -9,6 +9,9 @@ Example power(2, 0) = 0
 
 
 def power(base: int, exponent: int) -> int:
+    """
+    calculates powers
+    """
     if exponent == 1:
         return base
     elif exponent < 0:

@@ -4,9 +4,9 @@ return the index of the value if the value exits else it should return -1.
 """
 
 
-def BinarySearch(input: list, value) -> int:
+def binary_search(input_arr: list, value) -> int:
     pointer1 = 0
-    pointer2 = len(input) - 1
+    pointer2 = len(input_arr) - 1
 
     def helper(low: int, high: int) -> int:
         mid_val = low + (high - low) // 2
@@ -15,9 +15,9 @@ def BinarySearch(input: list, value) -> int:
         # we will be in a loop.
         if low >= high:
             return -1
-        if value == input[mid_val]:
+        if value == input_arr[mid_val]:
             return mid_val
-        elif value < input[mid_val]:
+        elif value < input_arr[mid_val]:
             return helper(low=low, high=mid_val - 1)
         else:
             return helper(low=mid_val + 1, high=high)

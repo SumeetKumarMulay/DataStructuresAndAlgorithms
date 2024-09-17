@@ -6,29 +6,29 @@ undefined.
 """
 
 
-def sumZero(input=[]) -> list[int]:
-    # the standard sorting method is list o(n) so the function is o(n)
-    sortedInput = sorted(input) if input else []
-    if sortedInput:
-        pointerLeft: int = 0
-        pointerRight: int = len(sortedInput) - 1
-        checkSum = sortedInput[pointerLeft] + sortedInput[pointerRight]
-        if checkSum == 0:
-            return [sortedInput[pointerLeft], sortedInput[pointerRight]]
-        elif checkSum > 0:
-            sortedInput.pop(pointerRight)
-            return sumZero(input=sortedInput)
-        elif checkSum < 0:
-            sortedInput.pop(pointerLeft)
-            return sumZero(input=sortedInput)
+def sum_zero(input_arr: list) -> list[int]:
+    """the standard sorting method is list o(n) so the function is o(n)"""
+    sorted_input = sorted(input_arr) if input_arr else []
+    if sorted_input:
+        pointer_left: int = 0
+        pointer_right: int = len(sorted_input) - 1
+        check_sum = sorted_input[pointer_left] + sorted_input[pointer_right]
+        if check_sum == 0:
+            return [sorted_input[pointer_left], sorted_input[pointer_right]]
+        elif check_sum > 0:
+            sorted_input.pop(pointer_right)
+            return sum_zero(input_arr=sorted_input)
+        elif check_sum < 0:
+            sorted_input.pop(pointer_left)
+            return sum_zero(input_arr=sorted_input)
         else:
             return None
     else:
         return None
 
 
-result = sumZero(
-    input=[
+result = sum_zero(
+    input_arr=[
         -56,
         32,
         -27,

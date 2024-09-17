@@ -4,17 +4,20 @@ letter of everyword in the array and returns a new array with the updated
 strings. 
 """
 
-def capitalizeFirst(input: list[str]) -> list[str]:
-    newArr = []
+
+def capitalize_first(input_arr: list[str]) -> list[str]:
+    """
+    only capitalizes the first letters.
+    """
+    new_arr = []
 
     def helper(ip: list[str]) -> list[str]:
-        nonlocal newArr 
+        nonlocal new_arr
         if len(ip) == 0:
-            return newArr
+            return new_arr
         else:
             updated = ip[0].capitalize()
-            newArr.append(updated)
-            return helper(ip=ip[1:]) 
-    
-    return helper(ip=input)
-            
+            new_arr.append(updated)
+            return helper(ip=ip[1:])
+
+    return helper(ip=input_arr)

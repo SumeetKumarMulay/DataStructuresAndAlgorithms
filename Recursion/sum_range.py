@@ -4,7 +4,9 @@ So, for example: if number 4 is provided then number 4, 3, 2, 1 are added and th
 returned. 
 """
 
+
 def sum_range(num: int) -> int:
+    """recursive sum"""
     # this is the base case
     if num == 1:
         return 1
