@@ -5,11 +5,12 @@ function end. 2. The changing input-> This is obvious.
 
 """
 
-def countDown(num: int)-> str:
+
+def count_down(num: int) -> str:
+    """3, 2, 1"""
     if num <= 0:
         return "All Done"
     else:
         print(num)
         num -= 1
-        return countDown(num=num)
-    
+        return count_down(num=num)

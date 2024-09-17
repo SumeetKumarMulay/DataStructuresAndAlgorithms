@@ -5,17 +5,20 @@ function has collected all the strings in the object it should return the array
 """
 
 
-def collectStrings(input: dict) -> list[str]:
-    newArr = []
-    
-    def helper(ip: dict) -> list[str]: 
-        nonlocal newArr
+def collect_strings(input_arr: dict) -> list[str]:
+    """
+    collects string a returns an array
+    """
+    new_arr = []
+
+    def helper(ip: dict) -> list[str]:
+        nonlocal new_arr
         for keys in ip:
             if isinstance(ip[keys], dict):
                 helper(ip=ip[keys])
             elif isinstance(ip[keys], str):
-                newArr.append(ip[keys])
+                new_arr.append(ip[keys])
 
-        return newArr
-    
-    return helper(ip=input)
+        return new_arr
+
+    return helper(ip=input_arr)

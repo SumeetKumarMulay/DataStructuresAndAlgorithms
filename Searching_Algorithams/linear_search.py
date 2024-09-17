@@ -5,17 +5,20 @@ return the index else return -1.
 """
 
 
-def LinearSearch(array: list, values) -> int:
+def linear_search(array: list, values) -> int:
+    """This is a linear search function which is the most basic. We just go through the
+    complete array and compair.
+    """
     index_count = 0
 
-    def helper(ipArr: list, value):
+    def helper(ip_arr: list, value):
         nonlocal index_count
-        if len(ipArr) == 0:
+        if len(ip_arr) == 0:
             return -1
-        if ipArr[0] == value:
+        if ip_arr[0] == value:
             return index_count
         else:
             index_count += 1
-            return helper(ipArr=ipArr[1:], value=value)
+            return helper(ip_arr=ip_arr[1:], value=value)
 
-    return helper(ipArr=array, value=values)
+    return helper(ip_arr=array, value=values)

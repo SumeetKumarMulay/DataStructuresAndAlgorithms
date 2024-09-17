@@ -5,7 +5,11 @@ numbers in that list.
 """
 
 
-def nestedEven(input: dict) -> int:
+def nested_even_sum(input_arr: dict) -> int:
+    """
+    calculates by first checking if ip is an object or even number and provides
+    a sum of all even numbers.
+    """
     op = 0
 
     def helper(ip: dict) -> int:
@@ -17,4 +21,4 @@ def nestedEven(input: dict) -> int:
                 op += ip[values]
         return op
 
-    return helper(ip=input)
+    return helper(ip=input_arr)

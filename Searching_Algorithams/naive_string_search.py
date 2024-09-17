@@ -1,22 +1,22 @@
 """
-This is a naive approach to string. 
+This is a naive approach to string.
 Write a function which accepts two strings. Find the number of times the second string appears
 in the first one and return the count.
 """
 
-"""
-In this approach we have are going to look at each individual alphabet from both strings. if the 
-squence of alphabets in the second matches the sequence of string in the first we increment match
-by 1 else we continue till we have looped over the first string once. Once we have looped over we
-return the match values. 
 
-If there where same sequence of letters of the second string in the first one then match should be 
-greater than 0. else it will be 0. The Time complexity should be o(n * M) considering the we loop over
-the first string once and its lenght determines the time taken for the loop to finish. 
-"""
+def naive_string_search_v1(first_str: str, second_str: str) -> int:
+    """
+    NOTE - In this approach we have are going to look at each individual alphabet from both strings.
+    if the squence of alphabets in the second matches the sequence of string in the first we
+    increment match by 1 else we continue till we have looped over the first string once.
+    Once we have looped over we return the match values.
 
-
-def NaiveStringSearchV1(first_str: str, second_str: str) -> int:
+    If there where same sequence of letters of the second string in the first one then match should
+    be greater than 0. else it will be 0. The Time complexity should be o(n * M) considering
+    the we loop over the first string once and its lenght determines the time taken for the
+    loop to finish.
+    """
     match = 0
 
     pointer1 = 0
@@ -43,15 +43,12 @@ def NaiveStringSearchV1(first_str: str, second_str: str) -> int:
     return match
 
 
-"""
-In the second approach we are going to use a window and splice the first string and compaire that
-with the second string. This should reduce code complexity and space complexity but time complexity 
-remains the same i.e. o(n * M).
-
-"""
-
-
-def NaiveStringSearchV2(first_str: str, second_str: str) -> int:
+def naive_string_search_v2(first_str: str, second_str: str) -> int:
+    """
+    NOTE - In the second approach we are going to use a window and splice the first string and
+    compair that with the second string. This should reduce code complexity and space complexity
+    but time complexity remains the same i.e. o(n * M).
+    """
     match = 0
 
     window_side_a = 0

@@ -4,7 +4,7 @@ pair who's avg is equal to target value.
 """
 
 
-def averagePair(input_list: list[int], target_value: float) -> bool:
+def average_pair(input_list: list[int], target_value: float) -> bool:
     pointer1 = 0
     pointer2 = len(input_list) - 1
     if len(input_list) == 0:
@@ -19,5 +19,3 @@ def averagePair(input_list: list[int], target_value: float) -> bool:
         else:
             return True
     return False
-
-
