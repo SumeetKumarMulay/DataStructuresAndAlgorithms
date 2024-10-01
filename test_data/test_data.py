@@ -1,3 +1,6 @@
+import random
+
+
 nested_obj = {
     "a": 2,
     "b": {"c": 4, "d": {"e": 6, "f": 8}},
@@ -146,3 +149,31 @@ longList: list[int] = [
     33,
     86,
 ]
+
+
+def generate_random_num_list(lenght: int = None,
+                         max_val: int = None,
+                         min_val: int = None,) -> list[int]:
+    """
+    Generates a random list of numbers. 
+
+    Args:
+        lenght (int, optional): Use this if you want a list of a given size. Defaults to None so, 
+        a random values will be selected.
+        max_val (int, optional): Use this to provide a max value. Defaults to None so, 
+        a random values will be selected. 
+        min_val (int, optional): Use this to provide min value. Defaults to None so, 
+        a random values will be selected.
+
+    Returns:
+        list[int]: returns a random list of integers. 
+    """
+    random_list: list[int] = []
+    mx = max_val if max_val is not None else random.randint(100, 200)
+    mn = min_val if min_val is not None else random.randint(1, 99)
+    size = lenght if lenght is not None else random.randint(60, 500)
+
+    for _ in range(size):
+        generate_int = random.randint(mn, mx)
+        random_list.append(generate_int)
+    return random_list

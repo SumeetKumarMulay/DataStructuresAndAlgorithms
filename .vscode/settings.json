@@ -1,0 +1,13 @@
+{
+"pylint.args": [
+  "--init-hook", 
+  "import os, sys; sys.path.append(os.path.join('.','app'))",
+  "--disable=W1203",
+],
+"editor.formatOnPaste": true,
+"editor.formatOnSave": true,
+"editor.defaultFormatter": "ms-python.autopep8",
+"python.analysis.autoFormatStrings": true,
+"python.analysis.autoIndent": true,
+"python.analysis.autoImportCompletions": true,
+}
