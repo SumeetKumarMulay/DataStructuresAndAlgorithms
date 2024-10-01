@@ -4,7 +4,7 @@ The values should "bubble up" to the top.
 """
 
 
-def bubble_sort(input: list[int]) -> list[int]:
+def bubble_sort_v_1(input: list[int]) -> list[int]:
     """
     Sorts a given array from the smallet to the larges value.
 
@@ -16,6 +16,7 @@ def bubble_sort(input: list[int]) -> list[int]:
     """
 
     for i in range(len(input)):
+        # here we are reducing the lenght of array every ittration.
         for j in range(0, len(input) - i - 1):
             if input[j] > input[j + 1]:
                 temp = input[j]
@@ -25,7 +26,7 @@ def bubble_sort(input: list[int]) -> list[int]:
     return input
 
 
-def bubble_sort_v2(input: list[int]) -> list[int]:
+def bubble_sort_v_1_1(input: list[int]) -> list[int]:
     """
     The logic is same as above but written using recursion. 
 
@@ -62,3 +63,27 @@ def bubble_sort_v2(input: list[int]) -> list[int]:
         return looper(ip=compaier_loop(inp=ip))
 
     return looper(ip=input)
+
+
+def bubble_sort_v_2(input: list[int]) -> list[int]:
+    """
+    Here are going to do some optimisations on bubble_sort_v_1. We are going 
+    reduce the number of ittrations the list goes through.  
+
+    Args:
+        input (list[int]): List of integers to be sorted. 
+
+    Returns:
+        list[int]: List of sorted integers. 
+    """
+    for i in range(len(input)):
+        swap: bool = True
+        for j in range(0, len(input) - i - 1):
+            if input[j] > input[j + 1]:
+                temp = input[j]
+                input[j] = input[j + 1]
+                input[j + 1] = temp
+                swap = False
+        if swap:
+            break
+    return input

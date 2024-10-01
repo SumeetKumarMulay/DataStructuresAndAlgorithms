@@ -35,7 +35,8 @@ from test_data.test_data import (
 # from Searching_Algorithams.naive_string_search import naive_string_search_v2
 
 # # sorting algo
-from Sorting_Algorithams.bubble_sort import bubble_sort, bubble_sort_v2
+from Sorting_Algorithams.bubble_sort import bubble_sort_v_1, bubble_sort_v_1_1, bubble_sort_v_2
+
 
 
 def function_runner(func):
@@ -43,12 +44,12 @@ def function_runner(func):
     start = timer()
     result = func
     end = timer()
-    print(f"result:: {result} \n function took: {end - start}")
+    print(f"result:: {result} \n function took: {end - start} to complete!")
 
 
-random_list = generate_random_num_list()
+random_list = generate_random_num_list(lenght=100)
 print(f"list of size: {len(random_list)}")
 
 function_runner(
-    bubble_sort_v2(input=random_list)
+    bubble_sort_v_2(input=random_list)
 )
