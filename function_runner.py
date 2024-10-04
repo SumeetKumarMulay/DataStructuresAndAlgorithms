@@ -3,9 +3,13 @@ This is just a runner which is used to make the results look nice in the termina
 save on navigation time.
 
 """
-
+from timeit import default_timer as timer
 # # Data
-# from test_data.test_data import nested_obj, array_val_combo
+from test_data.test_data import (
+    generate_random_num_list,
+    nested_obj,
+    array_val_combo,
+    longList)
 
 # # Recursion Functions
 # from Recursion.basic_count_down import countDown
@@ -28,15 +32,23 @@ save on navigation time.
 
 # from Searching_Algorithams.linear_search import LinearSearch
 # from Searching_Algorithams.binary_search import BinarySearch
-from Searching_Algorithams.naive_string_search import naive_string_search_v2
+# from Searching_Algorithams.naive_string_search import naive_string_search_v2
+
+# # sorting algo
+# from Sorting_Algorithams.bubble_sort import bubble_sort_v_1, bubble_sort_v_1_1, bubble_sort_v_2
+# from Sorting_Algorithams.selection_sort import selection_sort
+from Sorting_Algorithams.insertion_sort import insertion_sort
 
 
-def function_runner(func):
-    """just a print statment"""
-    result = func
-    print(f"result:: {result}")
 
 
-function_runner(
-    naive_string_search_v2(first_str="бобагбоб фдгапк бобфмкгбоб", second_str="боб")
-)
+random_list = generate_random_num_list(lenght=10000)
+
+print(f"list of size: {len(random_list)}")
+
+start = timer()
+# NOTE insert function here.
+result = insertion_sort(values=random_list)
+end = timer()
+
+print(f"Result:: {result}\nThe function took: {round((end - start) * 1000, 5)} ms to complete!")
