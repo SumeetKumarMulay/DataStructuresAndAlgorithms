@@ -3,6 +3,7 @@
   "--init-hook", 
   "import os, sys; sys.path.append(os.path.join('.','app'))",
   "--disable=W1203",
+  "--disable=C0200"
 ],
 "editor.formatOnPaste": true,
 "editor.formatOnSave": true,

@@ -35,21 +35,20 @@ from test_data.test_data import (
 # from Searching_Algorithams.naive_string_search import naive_string_search_v2
 
 # # sorting algo
-from Sorting_Algorithams.bubble_sort import bubble_sort_v_1, bubble_sort_v_1_1, bubble_sort_v_2
+# from Sorting_Algorithams.bubble_sort import bubble_sort_v_1, bubble_sort_v_1_1, bubble_sort_v_2
+# from Sorting_Algorithams.selection_sort import selection_sort
+from Sorting_Algorithams.insertion_sort import insertion_sort
 
 
 
-def function_runner(func):
-    """just a print statment"""
-    start = timer()
-    result = func
-    end = timer()
-    print(f"result:: {result} \n function took: {end - start} to complete!")
 
+random_list = generate_random_num_list(lenght=10000)
 
-random_list = generate_random_num_list(lenght=100)
 print(f"list of size: {len(random_list)}")
 
-function_runner(
-    bubble_sort_v_2(input=random_list)
-)
+start = timer()
+# NOTE insert function here.
+result = insertion_sort(values=random_list)
+end = timer()
+
+print(f"Result:: {result}\nThe function took: {round((end - start) * 1000, 5)} ms to complete!")
