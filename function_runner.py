@@ -1,5 +1,5 @@
 """
-This is just a runner which is used to make the results look nice in the terminal as well 
+This is just a runner which is used to make the results look nice in the terminal as well
 save on navigation time.
 
 """
@@ -37,18 +37,20 @@ from test_data.test_data import (
 # # sorting algo
 # from Sorting_Algorithams.bubble_sort import bubble_sort_v_1, bubble_sort_v_1_1, bubble_sort_v_2
 # from Sorting_Algorithams.selection_sort import selection_sort
-from Sorting_Algorithams.insertion_sort import insertion_sort
+# from Sorting_Algorithams.insertion_sort import insertion_sort
+# from Sorting_Algorithams.merge_sort import merge_sort
+from Sorting_Algorithams.quick_sort import quick_sort
 
 
+random_list = generate_random_num_list(lenght=6)
+print(f"\nRandom List:: {random_list}")
 
-
-random_list = generate_random_num_list(lenght=10000)
-
-print(f"list of size: {len(random_list)}")
+print(f"\nSize of list:: {len(random_list)}")
 
 start = timer()
 # NOTE insert function here.
-result = insertion_sort(values=random_list)
+result = quick_sort(input_list=random_list)
 end = timer()
 
-print(f"Result:: {result}\nThe function took: {round((end - start) * 1000, 5)} ms to complete!")
+print(f"\nResult:: {result}\n\nThe function took: {
+      round((end - start) * 1000, 5)} ms to complete!\n")
