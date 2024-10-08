@@ -11,7 +11,7 @@ def binary_search(input_arr: list, value) -> int:
     def helper(low: int, high: int) -> int:
         mid_val = low + (high - low) // 2
         # NOTE - Here if the if 'low' if greater then 'high' then it means
-        # we have gone through the array once. if this chech does not exist
+        # we have gone through the array once. if this check does not exist
         # we will be in a loop.
         if low >= high:
             return -1
