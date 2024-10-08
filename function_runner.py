@@ -39,7 +39,9 @@ from test_data.test_data import (
 # from Sorting_Algorithams.selection_sort import selection_sort
 # from Sorting_Algorithams.insertion_sort import insertion_sort
 # from Sorting_Algorithams.merge_sort import merge_sort
-from Sorting_Algorithams.quick_sort import quick_sort
+# from Sorting_Algorithams.quick_sort import quick_sort
+from Sorting_Algorithams.radix_sort import radix_sort
+
 
 
 random_list = generate_random_num_list(lenght=6)
@@ -49,7 +51,7 @@ print(f"\nSize of list:: {len(random_list)}")
 
 start = timer()
 # NOTE insert function here.
-result = quick_sort(input_list=random_list)
+result = radix_sort(values=random_list)
 end = timer()
 
 print(f"\nResult:: {result}\n\nThe function took: {
