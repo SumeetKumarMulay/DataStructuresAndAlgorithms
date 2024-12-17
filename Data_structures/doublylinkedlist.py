@@ -33,7 +33,7 @@ class DoublyLinkedList:
         return self
 
     def pop(self):
-        """The functin pops the last node on the list and returns it."""
+        """The function pops the last node on the list and returns it."""
         if self.length == 0:
             return None
         current_tail = self.tail

@@ -151,14 +151,14 @@ longList: list[int] = [
 ]
 
 
-def generate_random_num_list(lenght: int = None,
+def generate_random_num_list(length: int = None,
                          max_val: int = None,
                          min_val: int = None,) -> list[int]:
     """
     Generates a random list of numbers. 
 
     Args:
-        lenght (int, optional): Use this if you want a list of a given size. Defaults to None so, 
+        length (int, optional): Use this if you want a list of a given size. Defaults to None so, 
         a random values will be selected.
         max_val (int, optional): Use this to provide a max value. Defaults to None so, 
         a random values will be selected. 
@@ -171,7 +171,7 @@ def generate_random_num_list(lenght: int = None,
     random_list: list[int] = []
     mx = max_val if max_val is not None else random.randint(100, 200)
     mn = min_val if min_val is not None else random.randint(1, 99)
-    size = lenght if lenght is not None else random.randint(60, 500)
+    size = length if length is not None else random.randint(60, 500)
 
     for _ in range(size):
         generate_int = random.randint(mn, mx)
