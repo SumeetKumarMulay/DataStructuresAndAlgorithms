@@ -20,7 +20,7 @@ from test_data.test_data import (
 # from Recursion.recursive_range import recursive_range
 # from Recursion.fib import fib
 # from Recursion.reverse import reverse
-# from Recursion.isPalendrome import isPalendrone
+# from Recursion.isPalindrome import isPalindrome
 # from Recursion.flatten import flatten
 # from Recursion.capitalizeFirst import capitalizeFirst
 # from Recursion.nestedEvenSum import nestedEven
@@ -30,28 +30,42 @@ from test_data.test_data import (
 
 # # Searching Functions
 
-# from Searching_Algorithams.linear_search import LinearSearch
-# from Searching_Algorithams.binary_search import BinarySearch
-# from Searching_Algorithams.naive_string_search import naive_string_search_v2
+# from Searching_Algorithms.linear_search import LinearSearch
+# from Searching_Algorithms.binary_search import BinarySearch
+# from Searching_Algorithms.naive_string_search import naive_string_search_v2
 
 # # sorting algo
-# from Sorting_Algorithams.bubble_sort import bubble_sort_v_1, bubble_sort_v_1_1, bubble_sort_v_2
-# from Sorting_Algorithams.selection_sort import selection_sort
-# from Sorting_Algorithams.insertion_sort import insertion_sort
-# from Sorting_Algorithams.merge_sort import merge_sort
-# from Sorting_Algorithams.quick_sort import quick_sort
-from Sorting_Algorithams.radix_sort import radix_sort
+# from Sorting_Algorithms.bubble_sort import bubble_sort_v_1, bubble_sort_v_1_1, bubble_sort_v_2
+# from Sorting_Algorithms.selection_sort import selection_sort
+# from Sorting_Algorithms.insertion_sort import insertion_sort
+# from Sorting_Algorithms.merge_sort import merge_sort
+# from Sorting_Algorithms.quick_sort import quick_sort
+#from Sorting_Algorithms.radix_sort import radix_sort
+
+from Data_structures.binarysearchtree import BinarySearchTree
+
+bst = BinarySearchTree()
+bst.insert(10)
+bst.insert(5)
+bst.insert(15)
+bst.insert(3)
+bst.insert(7)
+bst.insert(12)
+bst.insert(17)
+bst.insert(17)
 
 
 
-random_list = generate_random_num_list(lenght=6)
-print(f"\nRandom List:: {random_list}")
 
-print(f"\nSize of list:: {len(random_list)}")
+# random_list = generate_random_num_list(length=6)
+# print(f"\nRandom List:: {random_list}")
+
+# print(f"\nSize of list:: {len(random_list)}")
 
 start = timer()
 # NOTE insert function here.
-result = radix_sort(values=random_list)
+bst.inorder(bst.root)
+result = bst.contains(2)
 end = timer()
 
 print(f"\nResult:: {result}\n\nThe function took: {

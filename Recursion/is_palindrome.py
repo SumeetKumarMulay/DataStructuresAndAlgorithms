@@ -1,10 +1,10 @@
 """
-Write a function that checks if the string is a palendrone
+Write a function that checks if the string is a palindrome
 """
 
-def is_palendrone(input_arr: str) -> bool:
+def is_palindrome(input_arr: str) -> bool:
     """
-    checks by reversing the string and compairing it to itself. 
+    checks by reversing the string and comparing it to itself. 
     """
     reverse_str: str = ""
 
