@@ -114,9 +114,79 @@ class BinarySearchTree:
                     return False
                 current_node = current_node.right
 
-    def inorder(self, node: Node):
-        """This function is used to print binary tree"""
-        if node is not None:
-            self.inorder(node.left)
-            print(node.value, end=" ")
-            self.inorder(node.right)
+    def breath_first_search(self) -> list:
+        """
+        This function does a breath fist search of the tree.
+        Returns:
+            list: list of all the values in the tree.
+        """
+        final_list = []
+        if self.root is None:
+            return final_list
+
+        queue: list[Node] = []
+        queue.append(self.root)
+        while len(queue) != 0:
+            current_node = queue[0]
+            queue.pop(0)
+            final_list.append(current_node.value)
+            if current_node.left is not None:
+                queue.append(current_node.left)
+            if current_node.right is not None:
+                queue.append(current_node.right)
+        return final_list
+
+    def pre_order(self) -> list:
+        """
+        This function travels the tree depth first. Using the post order method what this means
+        is that nodes are visited top to bottom.
+        Returns:
+            list: list of all the values in the tree.
+        """
+        final_list = []
+
+        def traversal(node: Node) -> list:
+            final_list.append(node.value)
+            if node.left:
+                traversal(node.left)
+            if node.right:
+                traversal(node.right)
+            return final_list
+
+        return traversal(self.root)
+
+    def post_order(self) -> list:
+        """
+        This is post order which means that nodes are visited bottom to top at the same time.
+        Returns:
+            list: list of all the values in the tree.
+        """
+        final_list = []
+
+        def traversal(node: Node) -> list:
+            if node.left:
+                traversal(node.left)
+            if node.right:
+                traversal(node.right)
+            final_list.append(node.value)
+            return final_list
+        return traversal(self.root)
+
+    def in_order(self) -> list:
+        """
+        This is in order which means that nodes are visited bottom to top but one branch at
+        a time.
+        Returns:
+            list: list of all the values in the tree.
+        """
+        final_list = []
+
+        def traversal(node: Node) -> list:
+            if node.left:
+                traversal(node.left)
+            final_list.append(node.value)
+            if node.right:
+                traversal(node.right)
+            return final_list
+        
+        return traversal(self.root)
