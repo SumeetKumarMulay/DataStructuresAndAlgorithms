@@ -47,24 +47,27 @@ from Data_structures.binarysearchtree import BinarySearchTree
 bst = BinarySearchTree()
 
 
-random_list = generate_random_num_list(length=100)
+random_list = generate_random_num_list(length=1000)
 
 
 def insert_rand_values():
     """This function add random values to the binary search tree"""
     for x in random_list:
         bst.insert(x)
-
-
-
+bst.insert_rec(10)
+bst.insert_rec(6)
+bst.insert_rec(3)
+bst.insert_rec(8)
+bst.insert_rec(15)
+bst.insert_rec(20)
 # print(f"\nRandom List:: {random_list}")
 
 # print(f"\nSize of list:: {len(random_list)}")
 
 start = timer()
 # NOTE insert function here.
-insert_rand_values()
-result = bst.breath_first_search()
+#insert_rand_values()
+result = bst.in_order()
 end = timer()
 
 print(f"\nResult:: {result}\n\nThe function took: {
