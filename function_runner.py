@@ -40,32 +40,31 @@ from test_data.test_data import (
 # from Sorting_Algorithms.insertion_sort import insertion_sort
 # from Sorting_Algorithms.merge_sort import merge_sort
 # from Sorting_Algorithms.quick_sort import quick_sort
-#from Sorting_Algorithms.radix_sort import radix_sort
+# from Sorting_Algorithms.radix_sort import radix_sort
 
 from Data_structures.binarysearchtree import BinarySearchTree
 
 bst = BinarySearchTree()
-bst.insert(10)
-bst.insert(5)
-bst.insert(15)
-bst.insert(3)
-bst.insert(7)
-bst.insert(12)
-bst.insert(17)
-bst.insert(17)
+
+
+random_list = generate_random_num_list(length=100)
+
+
+def insert_rand_values():
+    """This function add random values to the binary search tree"""
+    for x in random_list:
+        bst.insert(x)
 
 
 
-
-# random_list = generate_random_num_list(length=6)
 # print(f"\nRandom List:: {random_list}")
 
 # print(f"\nSize of list:: {len(random_list)}")
 
 start = timer()
 # NOTE insert function here.
-bst.inorder(bst.root)
-result = bst.contains(2)
+insert_rand_values()
+result = bst.breath_first_search()
 end = timer()
 
 print(f"\nResult:: {result}\n\nThe function took: {

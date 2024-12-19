@@ -114,6 +114,28 @@ class BinarySearchTree:
                     return False
                 current_node = current_node.right
 
+    def breath_first_search(self) -> list:
+        """
+        This function does a breath fist search of the tree.
+        Returns:
+            list: list of all the values in the tree.
+        """
+        final_list = []
+        if self.root is None:
+            return final_list
+
+        queue: list[Node] = []
+        queue.append(self.root)
+        while len(queue) != 0:
+            current_node = queue[0]
+            queue.pop(0)
+            final_list.append(current_node.value)
+            if current_node.left is not None:
+                queue.append(current_node.left)
+            if current_node.right is not None:
+                queue.append(current_node.right)
+        return final_list
+
     def inorder(self, node: Node):
         """This function is used to print binary tree"""
         if node is not None:
