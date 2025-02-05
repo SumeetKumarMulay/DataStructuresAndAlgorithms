@@ -188,5 +188,5 @@ class BinarySearchTree:
             if node.right:
                 traversal(node.right)
             return final_list
-        
+
         return traversal(self.root)

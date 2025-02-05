@@ -42,32 +42,36 @@ from test_data.test_data import (
 # from Sorting_Algorithms.quick_sort import quick_sort
 # from Sorting_Algorithms.radix_sort import radix_sort
 
-from Data_structures.binarysearchtree import BinarySearchTree
+#from Data_structures.binarysearchtree import BinarySearchTree
+#from Data_structures.maxbinaryheap import MaxBinaryHeap
+from Data_structures.priorityqueue import PriorityQueue
 
-bst = BinarySearchTree()
+# random_list = generate_random_num_list(length=1000)
 
 
-random_list = generate_random_num_list(length=1000)
-
-
-def insert_rand_values():
-    """This function add random values to the binary search tree"""
-    for x in random_list:
-        bst.insert(x)
-bst.insert_rec(10)
-bst.insert_rec(6)
-bst.insert_rec(3)
-bst.insert_rec(8)
-bst.insert_rec(15)
-bst.insert_rec(20)
+# def insert_rand_values():
+#     """This function add random values to the binary search tree"""
+#     for x in random_list:
+#         bst.insert(x)
+# bst.insert_rec(10)
+# bst.insert_rec(6)
+# bst.insert_rec(3)
+# bst.insert_rec(8)
+# bst.insert_rec(15)
+# bst.insert_rec(20)
 # print(f"\nRandom List:: {random_list}")
 
 # print(f"\nSize of list:: {len(random_list)}")
-
+new_bh = PriorityQueue()
 start = timer()
 # NOTE insert function here.
 #insert_rand_values()
-result = bst.in_order()
+
+# print(new_bh.values)
+# value = new_bh.extract_max()
+
+result = new_bh.values
+# print(new_bh.values)
 end = timer()
 
 print(f"\nResult:: {result}\n\nThe function took: {
