@@ -156,26 +156,3 @@ class Graphs:
 
         return final_list
 
-
-grp = Graphs()
-
-grp.add_vertex("A")
-grp.add_vertex("B")
-grp.add_vertex("C")
-grp.add_vertex("D")
-grp.add_vertex("E")
-grp.add_vertex("F")
-
-grp.add_edges("A", "B")
-grp.add_edges("A", "C")
-grp.add_edges("B", "D")
-grp.add_edges("C", "E")
-grp.add_edges("D", "E")
-grp.add_edges("D", "F")
-grp.add_edges("E", "F")
-
-
-print(json.dumps(grp.adjacency_list))
-result = grp.bfs_iterative("A")
-
-print(f"this is result {result}")
