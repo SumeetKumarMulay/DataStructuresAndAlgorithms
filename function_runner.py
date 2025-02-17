@@ -18,7 +18,7 @@ from test_data.test_data import (
 # from Recursion.power import power
 # from Recursion.product_array import product_array
 # from Recursion.recursive_range import recursive_range
-# from Recursion.fib import fib
+from Recursion.fib_and_memoization import fib_memo, fib_tabulation
 # from Recursion.reverse import reverse
 # from Recursion.isPalindrome import isPalindrome
 # from Recursion.flatten import flatten
@@ -44,7 +44,10 @@ from test_data.test_data import (
 
 #from Data_structures.binarysearchtree import BinarySearchTree
 #from Data_structures.maxbinaryheap import MaxBinaryHeap
-from Data_structures.priorityqueue import PriorityQueue
+#from Data_structures.priorityqueue_or_minbinaryheap import PriorityQueue
+
+#from Data_structures.weighted_graphs_and_dijkstras_algo import WeightedGraphs
+
 
 # random_list = generate_random_num_list(length=1000)
 
@@ -62,16 +65,12 @@ from Data_structures.priorityqueue import PriorityQueue
 # print(f"\nRandom List:: {random_list}")
 
 # print(f"\nSize of list:: {len(random_list)}")
-new_bh = PriorityQueue()
+
+
+
 start = timer()
-# NOTE insert function here.
-#insert_rand_values()
 
-# print(new_bh.values)
-# value = new_bh.extract_max()
-
-result = new_bh.values
-# print(new_bh.values)
+result = fib_tabulation(10000)
 end = timer()
 
 print(f"\nResult:: {result}\n\nThe function took: {

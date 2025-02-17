@@ -1,10 +1,5 @@
 """graphs.py"""
 
-
-import json
-from unittest import result
-
-
 class Graphs:
     """This is a graphs data structure and all its methods."""
 
@@ -155,4 +150,5 @@ class Graphs:
                     queue.append(values)
 
         return final_list
+
 
