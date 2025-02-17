@@ -18,7 +18,7 @@ from test_data.test_data import (
 # from Recursion.power import power
 # from Recursion.product_array import product_array
 # from Recursion.recursive_range import recursive_range
-# from Recursion.fib import fib
+from Recursion.fib_and_memoization import fib_memo, fib_tabulation
 # from Recursion.reverse import reverse
 # from Recursion.isPalindrome import isPalindrome
 # from Recursion.flatten import flatten
@@ -46,7 +46,7 @@ from test_data.test_data import (
 #from Data_structures.maxbinaryheap import MaxBinaryHeap
 #from Data_structures.priorityqueue_or_minbinaryheap import PriorityQueue
 
-from Data_structures.weighted_graphs_and_dijkstras_algo import WeightedGraphs
+#from Data_structures.weighted_graphs_and_dijkstras_algo import WeightedGraphs
 
 
 # random_list = generate_random_num_list(length=1000)
@@ -70,25 +70,7 @@ from Data_structures.weighted_graphs_and_dijkstras_algo import WeightedGraphs
 
 start = timer()
 
-grp = WeightedGraphs()
-
-grp.add_vertex("A")
-grp.add_vertex("B")
-grp.add_vertex("C")
-grp.add_vertex("D")
-grp.add_vertex("E")
-grp.add_vertex("F")
-
-grp.add_edges("A", "B", 4)
-grp.add_edges("A", "C", 2)
-grp.add_edges("B", "E", 3)
-grp.add_edges("C", "D", 2)
-grp.add_edges("C", "F", 4)
-grp.add_edges("D", "E", 3)
-grp.add_edges("D", "F", 1)
-grp.add_edges("E", "F", 1)
-
-result = grp.dijkstras_algo("A", "E")
+result = fib_tabulation(10000)
 end = timer()
 
 print(f"\nResult:: {result}\n\nThe function took: {
