@@ -1,5 +1,5 @@
 """
-Write a function which accepts an array which counts all the unqiue values in that array and
+Write a function which accepts an array which counts all the unique values in that array and
 returns the count. 
 """
 

@@ -5,6 +5,9 @@
   "--disable=W1203",
   "--disable=C0200"
 ],
+"flake8.args": [
+  "--max-line-lenght=120",
+],
 "editor.formatOnPaste": true,
 "editor.formatOnSave": true,
 "editor.defaultFormatter": "ms-python.autopep8",

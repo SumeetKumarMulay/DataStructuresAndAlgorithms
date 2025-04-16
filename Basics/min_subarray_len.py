@@ -1,7 +1,7 @@
 """
-Write a function called minsub_arrayLen which accepts two parameter an array of positive integer
-The function should return the min lenght of a contigeous sub_array of which the sum is greate 
-or equal to integers passed into the function. If there isnt one Return 0
+Write a function called min_sub_arrayLen which accepts two parameter an array of positive integer
+The function should return the min length of a contiguous sub_array of which the sum is greate
+or equal to integers passed into the function. If there isn't one Return 0
 """
 
 
@@ -25,7 +25,7 @@ def min_sub_array_len(input_list: list[int], value: int) -> int:
     while window_size < len(input_list):
         window_side_a = 0
         window_side_b = window_size + 1
-        for v in input_list:
+        for _ in input_list:
             sub_list = input_list[window_side_a:window_side_b]
             sum_arr = sum_rec(input_list=sub_list)
             if sum_arr >= value:

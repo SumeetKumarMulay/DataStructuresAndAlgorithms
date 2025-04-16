@@ -25,7 +25,7 @@ def valid_anagram(string1: str, string2: str) -> bool:
             else:
                 counter2[alpha] = 1
         # compairing both the strings.
-        for key, value in counter1.items():
+        for key, _ in counter1.items():
             if not key in counter2:
                 return False
             if counter2[key] != counter1[key]:

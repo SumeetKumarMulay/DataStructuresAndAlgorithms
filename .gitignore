@@ -5,7 +5,6 @@ __pycache__/
 __init__.py
 # C extensions
 *.so
-leetcode
 
 # Distribution / packaging
 .Python

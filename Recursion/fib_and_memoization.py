@@ -15,7 +15,8 @@ def fib(num: int) -> int:
 
 def fib_memo(num: int, memo: dict = None):
     """
-    This is a simple fib function which uses the concept of memoization where calculated values
+    This is a simple fib function which uses the concept of memoization where 
+    calculated values
     are stored in a simple list called memo and num represent the n in fib(n).
     Args:
         num (int): This the n in fib(n)
@@ -52,3 +53,19 @@ def fib_tabulation(num: int):
         res = fib_nums[i - 1] + fib_nums[i - 2]
         fib_nums.append(res)
     return fib_nums[num]
+
+
+def fib_generator():
+    """
+    This function generates the fib sequence.
+    Yields:
+        int : start from the the 0th value.
+    """
+    num1 = 0
+    num2 = 1
+
+    while True:
+        yield num1
+        next_num = num1 + num2
+        num1 = num2
+        num2 = next_num

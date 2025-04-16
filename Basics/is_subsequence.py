@@ -1,5 +1,5 @@
 """
-Write a function that takes in two string. The function should then compair 
+Write a function that takes in two string. The function should then compare 
 the order of the two strings if the order of the two string are the same 
 should return true else it should return false. 
 

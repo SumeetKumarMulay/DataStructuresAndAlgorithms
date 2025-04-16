@@ -27,6 +27,7 @@ from Recursion.fib_and_memoization import fib_memo, fib_tabulation
 # from Recursion.capitalizeWords import capitalizeWords
 # from Recursion.stringifyNumber import stringifyNumbers
 # from Recursion.collectStrings import collectStrings
+from Recursion.fib_and_memoization import fib_generator
 
 # # Searching Functions
 
@@ -42,11 +43,11 @@ from Recursion.fib_and_memoization import fib_memo, fib_tabulation
 # from Sorting_Algorithms.quick_sort import quick_sort
 # from Sorting_Algorithms.radix_sort import radix_sort
 
-#from Data_structures.binarysearchtree import BinarySearchTree
-#from Data_structures.maxbinaryheap import MaxBinaryHeap
-#from Data_structures.priorityqueue_or_minbinaryheap import PriorityQueue
+# from Data_structures.binarysearchtree import BinarySearchTree
+# from Data_structures.maxbinaryheap import MaxBinaryHeap
+# from Data_structures.priorityqueue_or_minbinaryheap import PriorityQueue
 
-#from Data_structures.weighted_graphs_and_dijkstras_algo import WeightedGraphs
+# from Data_structures.weighted_graphs_and_dijkstras_algo import WeightedGraphs
 
 
 # random_list = generate_random_num_list(length=1000)
@@ -67,11 +68,51 @@ from Recursion.fib_and_memoization import fib_memo, fib_tabulation
 # print(f"\nSize of list:: {len(random_list)}")
 
 
-
 start = timer()
 
 result = fib_tabulation(10000)
 end = timer()
 
-print(f"\nResult:: {result}\n\nThe function took: {
-      round((end - start) * 1000, 5)} ms to complete!\n")
+# print(f"\nResult:: {result}\n\nThe function took: {
+#       round((end - start) * 1000, 5)} ms to complete!\n")
+test = {
+    "1": "test",
+    "2": "test",
+    "3": "test",
+}
+
+test1 = {
+    "4": "test",
+    "5": "test",
+    "6": "test"
+}
+
+test3 = test | test1
+
+l1 = ["1", "2", "3"]
+
+# for i in range(0, len(l1)):
+#     print(i)
+
+def reverse(value: str):
+    count = len(value)
+    reverse_str = ""
+    while count > 0:
+        count = count - 1
+        reverse_str = reverse_str + value[count]
+    return reverse_str
+
+x = lambda a : a[:: -1]
+
+
+gen = fib_generator(1)
+
+
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))

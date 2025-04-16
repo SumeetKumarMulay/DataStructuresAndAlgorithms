@@ -1,7 +1,7 @@
 """
 Write a function which accepts a list and a number. The number tell the number of values to
 be summed in the array. so for example if the input is [1, 2, 3, 4, 5, 6] and 4 the first 4 
-digits in the list should be added then the next four and soo on. Finially it should return 
+digits in the list should be added then the next four and soo on. Finally it should return 
 the max sum.  
 """
 
